@@ -2,7 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
+.home_card {
+  @apply h-[8rem] w-[12rem] shadow-xl rounded-lg flex items-start justify-center flex-col pl-9;
+}
 
-.home_right_container{
-    background: linear-gradient(152.12deg, #DA8AF6 14.1%, #657EF7 85.24%);
+/* .slider ul li button::before {
+  font-size: 1.25rem;
+  color: #ff96a7;
+  margin-top: 1.5rem;
+}
+
+.slider {
+  margin-top: 5rem;
+}
+.slider > div > div > div {
+  overflow: hidden !important;
+  display: flex !important;
+  justify-content: center;
+} */
+
+.userContainer {
+  /* margin-top: 3.25rem; */
+  width: 100%;
+  height: 74.44vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* padding-top: 18%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.userContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.userSayText {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 140%;
+  text-align: center;
+  color: #cc2c49;
+}
+.userSaySecondText {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 140%;
+  color: #404040;
+}
+
+.eachCard {
+  height: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px 1px rgba(125, 125, 125, 0.25);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+/* ============slick======== */
+
+.slider ul li button::before {
+  font-size: 1.25rem;
+  color: #ff96a7;
+  margin-top: 1.5rem;
+}
+
+.slider {
+  margin-top: 5rem;
+  border: 1px solid black;
+  width: 100%;
+}
+.slider > div > div > div {
+  overflow: hidden !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  margin-top: 1.44em;
+  gap: 1rem;
+  background-color: black;
+}
+.aboutProfile {
+  display: flex;
+  flex-direction: column;
+}
+.eachCard p {
+  width: 100%;
+}
+.stars {
+  display: flex;
+}
+
+.profileImg {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 4.56rem;
+  width: 4.5rem;
+}
+
+.starImg {
+  width: 1.125rem;
+  height: 1.125rem;
 }
