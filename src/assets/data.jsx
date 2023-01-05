@@ -8,28 +8,28 @@ import { IoExpandOutline } from "react-icons/io5";
 const homeCardData = [
   {
     icon: (
-      <BsDownload className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded " />
+      <BsDownload className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-7xl md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total downloads",
     count: "1.4M +",
   },
   {
     icon: (
-      <BiLike className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded " />
+      <BiLike className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-7xl md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total reviews",
     count: "1.2M +",
   },
   {
     icon: (
-      <BsShare className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded " />
+      <BsShare className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-7xl md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total shares",
     count: "1M +",
   },
   {
     icon: (
-      <IoExpandOutline className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded " />
+      <IoExpandOutline className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-7xl md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total users",
     count: "1M +",
@@ -38,9 +38,9 @@ const homeCardData = [
 
 const CenterImage = () => {
   return (
-    <div className=" relative w-[33%] h-[100%] bg-[url(hexagon.png)] bg-contain bg-no-repeat flex-auto">
+    <div className="grid place-items-center  w-[100vw] h-[100vh] bg-[url(hexagon.png)] bg-cover bg-no-repeat md:h-[70vh] lg:h-[100vh] justify-center lg:w-[34%] lg:bg-contain ">
       <img
-        className="absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+        className="md:h-[80%] md:w-[100vw] lg:h-[500px] lg:w-[500px]"
         src="product2.png"
         alt=""
       />
@@ -52,7 +52,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <AiFillSetting className=" cursor-pointer absolute top-[30px] right-[10px] h-[60px] w-[60px] font-medium rounded-full opacity-8 p-2 bg-[#C6BFFB] color-[#2F2F2F]" />
+      <AiFillSetting className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-[4rem] mt-2 rounded-full   p-2  md:text-[8rem] md:p-4 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -60,7 +60,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <AiFillSetting className=" cursor-pointer absolute top-[30px] right-[10px] h-[60px] w-[60px] font-medium rounded-full opacity-8 p-2 bg-[#C6BFFB] color-[#2F2F2F]" />
+      <AiFillSetting className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-[4rem] mt-2 rounded-full   p-2  md:text-[8rem] md:p-4 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -68,7 +68,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <BiLike className=" cursor-pointer absolute top-[30px] right-[10px] h-[60px] w-[60px] font-medium rounded-full opacity-8 p-2 bg-[#C6BFFB] color-[#2F2F2F]" />
+      <BiLike className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-[4rem] mt-2 rounded-full   p-2  md:text-[8rem] md:p-4 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -79,7 +79,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <IoExpandOutline className=" cursor-pointer absolute top-[30px] right-[10px] h-[60px] w-[60px] font-medium rounded-full opacity-8 p-2 bg-[#C6BFFB] color-[#2F2F2F]" />
+      <IoExpandOutline className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-[4rem] mt-2 rounded-full   p-2  md:text-[8rem] md:p-4 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -87,7 +87,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <BsShare className=" cursor-pointer absolute top-[30px] right-[10px] h-[60px] w-[60px] font-medium rounded-full opacity-8 p-2 bg-[#C6BFFB] color-[#2F2F2F]" />
+      <BsShare className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-[4rem] mt-2 rounded-full   p-2  md:text-[8rem] md:p-4 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -95,7 +95,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <BsDownload className=" cursor-pointer absolute top-[30px] right-[10px] h-[60px] w-[60px] font-medium rounded-full opacity-8 p-2 bg-[#C6BFFB] color-[#2F2F2F]" />
+      <BsDownload className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-[4rem] mt-2 rounded-full   p-2  md:text-[8rem] md:p-4 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",

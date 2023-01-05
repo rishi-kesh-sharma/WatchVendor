@@ -1,25 +1,102 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { FiMenu } from "react-icons/fi";
+import { RxCross1 } from "react-icons/rx";
 
+const Button = styled.button`
+  box-sizing: border-box;
+  width: ${(props) => (props.mdWidth ? props.mdWidth : "30px")};
+  height: ${(props) => (props.mdHeight ? props.mdHeight : "30px")};
+  background: #bd87f6;
+  border-radius: 16px;
+  color: white;
+`;
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+  const [isOnSmDevice, setIsOnSmDevice] = useState(false);
+  const handleResize = (e) => {
+    if (window.innerWidth > 768) return setIsOnSmDevice(false);
+    setIsOnSmDevice(true);
+  };
+
+  useEffect(() => {
+    if (window.innerWidth > 768) return setIsOnSmDevice(false);
+    return setIsOnSmDevice(true);
+  }, []);
+
   return (
-    <div>
-      <ul className="fixed z-50 top-0 left-0 right-0 w-[100%] h-[4rem] pt-2 gap-4 text-md font-semibold flex justify-center">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/overview">Overview</a>
-        </li>
-        <li>
-          <a href="/features">Features</a>
-        </li>
-        <li>
-          <a href="/screenshots">Screenshots</a>
-        </li>
-        <li>
-          <a href="/blog">Blog</a>
-        </li>
-      </ul>
+    <div className="relative min-h-[100px]">
+      {!show && (
+        <FiMenu
+          className="fixed z-30 top-6 right-3 text-3xl font-extralight md:hidden"
+          onClick={(e) => setShow(true)}
+        />
+      )}
+      {show && (
+        <RxCross1
+          className="fixed top-10 text-3xl  left-2 z-50 md:hidden"
+          onClick={(e) => setShow(false)}
+        />
+      )}
+      {show && (
+        <ul className=" fixed left-[0vw] flex flex-col w-[500px] items-center justify-center h-[100vh] bg-white z-40 md:hidden">
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/">Home</a>
+          </li>
+          <hr className="bg-purple-400  w-[100%] " />
+
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/overview">Overview</a>
+          </li>
+          <hr className="bg-purple-400 w-[100%]" />
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/features">Features</a>
+          </li>
+          <hr className="bg-purple-400 w-[100%]" />
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/screenshots">Screenshots</a>
+          </li>
+          <hr className="bg-purple-400 w-[100%] " />
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/blog">Blog</a>
+          </li>
+          <hr className="bg-purple-400 w-[100%]" />
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/buy">
+              <Button mdWidth={"110px"} mdHeight={"40px"}>
+                Buy Now
+              </Button>
+            </a>
+          </li>
+        </ul>
+      )}
+      {!isOnSmDevice && (
+        <ul className=" fixed left-0 right-0 top-[2rem] flex  w-[100vw] items-center justify-center h-[40px] bg-transparent   ">
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/">Home</a>
+          </li>
+
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/overview">Overview</a>
+          </li>
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/features">Features</a>
+          </li>
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/screenshots">Screenshots</a>
+          </li>
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/blog">Blog</a>
+          </li>
+          <li className="m-5 text-lg font-semibold  ">
+            <a href="/buy">
+              <Button mdWidth={"110px"} mdHeight={"40px"}>
+                Buy Now
+              </Button>
+            </a>
+          </li>
+        </ul>
+      )}
     </div>
   );
 };
