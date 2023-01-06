@@ -6,6 +6,12 @@
   @apply h-[8rem] w-[12rem] shadow-xl rounded-lg flex items-start justify-center flex-col pl-9;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 /* .slider ul li button::before {
   font-size: 1.25rem;
   color: #ff96a7;

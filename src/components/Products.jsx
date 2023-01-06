@@ -19,30 +19,30 @@ const Button = styled.button`
 const products = [
   {
     icon: (
-      <AiFillSetting className="font-semibold text-5xl bg-[#C6BFFB] p-[10px] rounded  md:text-9xl md:rounded-lg md:p-4 lg:text-7xl" />
+      <AiFillSetting className="font-semibold text-5xl bg-[#C6BFFB] p-[10px] rounded  md:text-5xl md:rounded-lg md:p-y lg:text-7xl" />
     ),
     title: "Best for organize and  customize easily",
     description:
       "Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the   industry's standard dummy text ever since the 1500s,",
     button: (
-      <Button mdHeight={"80px"} mdWidth={"300px"} mdTextSize={"2rem"}>
+      <button className="bg-[#bd87f6] px-3 py-1 text-white rounded-lg">
         Get Now
-      </Button>
+      </button>
     ),
     image: "product1.png",
     isPositionReverse: false,
   },
   {
     icon: (
-      <MdDashboardCustomize className="font-semibold text-2xl bg-[#C6BFFB] p-[3px] rounded  md:text-9xl md:rounded-lg md:p-4 lg:text-7xl" />
+      <MdDashboardCustomize className="font-semibold text-5xl bg-[#C6BFFB] p-[3px] rounded  md:text-5xl md:rounded-lg md:p-2 lg:text-7xl" />
     ),
     title: "Best for organize and customize easily",
     description:
       "Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the   industry's standard dummy text ever since the 1500s,",
     button: (
-      <Button mdHeight={"80px"} mdWidth={"300px"} mdTextSize={"2rem"}>
+      <button className="bg-[#bd87f6] px-3 py-1 text-white rounded-lg">
         Get Now
-      </Button>
+      </button>
     ),
     image: "product2.png",
     isPositionReverse: true,
@@ -66,9 +66,9 @@ const Products = () => {
           />
         );
       })}
-      <div className=" w-[100vw] h-[400px] mb-4 products_video lg:w-[100vw] lg:flex items-center justify-center">
+      <div className=" w-[100vw] h-[200px] z-[-10] mb-4 p-2 md:h-[400px] md:max-w-[600px] rounded-lg lg:w-[100vw] lg:flex items-center justify-center ">
         <video
-          className="w-[100%] h-[100%] lg:w-[800px] "
+          className="w-[100%] h-[100%] lg:w-[800px] rounded-lg  object-cover"
           src="/products-video.mp4"
           controls
         />

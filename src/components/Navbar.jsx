@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[100px]">
+    <div className="fixed min-h-[100px] ">
       {!show && (
         <FiMenu
           className="fixed z-30 top-6 right-3 text-3xl font-extralight md:hidden"
@@ -38,8 +38,10 @@ const Navbar = () => {
           onClick={(e) => setShow(false)}
         />
       )}
-      {show && (
-        <ul className=" fixed left-[0vw] flex flex-col w-[500px] items-center justify-center h-[100vh] bg-white z-40 md:hidden">
+
+      {/* navbar for small device */}
+      {show && isOnSmDevice && (
+        <ul className="fixed left-0  right-0 top-0 flex flex-col w-[100vw] items-center justify-center h-[100vh] bg-white z-40 md:hidden lg:hidden">
           <li className="m-5 text-lg font-semibold  ">
             <a href="/">Home</a>
           </li>
@@ -71,24 +73,24 @@ const Navbar = () => {
         </ul>
       )}
       {!isOnSmDevice && (
-        <ul className=" fixed left-0 right-0 top-[2rem] flex  w-[100vw] items-center justify-center h-[40px] bg-transparent   ">
-          <li className="m-5 text-lg font-semibold  ">
+        <ul className=" fixed hidden  z-40 md:z-50 left-0 right-0 top-[2rem] md:flex  w-[100vw] items-center justify-center h-[40px] md:top-0  md:bg-white  md:h-[60px] ">
+          <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/">Home</a>
           </li>
 
-          <li className="m-5 text-lg font-semibold  ">
+          <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/overview">Overview</a>
           </li>
-          <li className="m-5 text-lg font-semibold  ">
+          <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/features">Features</a>
           </li>
-          <li className="m-5 text-lg font-semibold  ">
+          <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/screenshots">Screenshots</a>
           </li>
-          <li className="m-5 text-lg font-semibold  ">
+          <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/blog">Blog</a>
           </li>
-          <li className="m-5 text-lg font-semibold  ">
+          <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/buy">
               <Button mdWidth={"110px"} mdHeight={"40px"}>
                 Buy Now

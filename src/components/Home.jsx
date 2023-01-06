@@ -19,13 +19,13 @@ const Button = styled.button`
 const Home = () => {
   return (
     <div>
-      <div className="text-center lg:flex lg:bg-[url(homebackground.png)] lg:bg-no-repeat lg:w-[100vw] lg:bg-cover">
-        <div className="home_left_container mb-4 w-[100vw] mt-6 md:pt-[100px] lg:flex-1 lg:mt-0 ">
-          <h1 className="font-semibold text-3xl px-3 md:text-7xl  md:text-center md:md-w-[700px] md:m-auto lg:text-4xl  ">
+      <div className="text-center pt-[100px] max-w-[100vw]  lg:flex  bg-[url(homebackground.png)]  bg-contain bg-no-repeat lg:bg-no-repeat lg:w-[100vw] lg:overflow-hidden lg:bg-cover">
+        <div className="home_left_container mb-4 w-[100vw]   md:pt-[100px] lg:flex-1 lg:mt-0 ">
+          <h1 className="font-semibold text-3xl px-3 md:text-3xl  md:text-center md:md-w-[700px] md:m-auto lg:text-4xl  ">
             {" "}
             Landing page for showcase watch
           </h1>
-          <p className="mt-7 p-3 text-sm md:m-auto md:w-[600px] md:opacity-70 md:my-5 md:text-2xl lg:text-xl  ">
+          <p className="mt-7 p-3 text-sm md:m-auto md:w-[600px]  md:my-5 md:text-lg lg:text-xl z-10 ">
             {" "}
             minus odio molestias dignissimos porro eveniet. Tempore ducimus
             aperiam, repellendus similique repellat quidem atque voluptate autem
@@ -38,19 +38,19 @@ const Home = () => {
             <Button transparent={"transparent"}>Add to Cart</Button>
           </div>
         </div>
-        <div className="home_right_container pt-[100px] p-3 h-[500px] bg-[url(home-bg-for-mobile.png)] md:bg-no-repeat md:bg-cover md:h-[70vh] md:grid md:place-items-center lg:bg-none lg:h-auto lg:relative">
-          {/* <img height="200" width="200" src={HomeImage} alt="home watch" /> */}
+        <div className="home_right_container grid place-items-center pt-[100px] p-3  h-[500px] bg-[url(home-bg-for-mobile.png)] bg-cover bg-no-repeat md:bg-no-repeat md:bg-cover md:h-[700px] md:w-[100vw] md:grid md:place-items-center lg:bg-none lg:h-auto lg:relative">
           <img
-            className="min-w-[800px] pr-[400px] pb-[100px]"
+            className="min-w-[700px] pr-[400px] pb-[100px] md:pb-0  md:pr-0 md:min-w-[500px] "
             src="homewatchimage.png"
             alt=""
           />
         </div>
       </div>
-      <div className="flex flex-wrap flex-col items-center md:flex-row md:p-2 md:justify-center md:gap-10">
+      <div className="flex flex-wrap flex-col items-center md:flex-row md:p-2 md:justify-center md:gap-10 ">
         {cardData.map((cardItem, index) => {
           const { title, count, icon } = cardItem;
           return <Card key={index} title={title} count={count} icon={icon} />;
+          opacity - [1];
         })}
       </div>
     </div>
