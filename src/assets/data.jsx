@@ -38,12 +38,14 @@ const homeCardData = [
 
 const CenterImage = () => {
   return (
-    <div className="grid w-[100vw] place-items-center p-8 bg-[url(hexagon.png)] bg-contain bg-center bg-no-repeat md:h-[500px] md:bg-contain md:bg-center  lg:h-[100vh]  lg:w-[34%] lg:bg-contain ">
-      <img
-        className="object-contain  lg:h-[500px] lg:w-[500px]"
-        src="product2.png"
-        alt=""
-      />
+    <div className="w-[100%] lg:w-[30%]">
+      <div className="h-[100%] grid place-items-center bg-[url(hexagon.png)] bg-no-repeat  md:bg-contain p-10 bg-center  ">
+        <img
+          className="object-contain  lg:h-[500px] lg:w-[500px]"
+          src="product2.png"
+          alt=""
+        />
+      </div>
     </div>
   );
 };
@@ -52,7 +54,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <AiFillSetting className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-1 lg:text-6xl lg:p-2 " />
+      <AiFillSetting className="  cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-1 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -60,7 +62,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <AiFillSetting className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl text-[4rem] mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
+      <AiFillSetting className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -68,7 +70,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <BiLike className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl text-[4rem] mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
+      <BiLike className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -79,7 +81,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <IoExpandOutline className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl text-[4rem] mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
+      <IoExpandOutline className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -87,7 +89,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <BsShare className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl text-[4rem] mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
+      <BsShare className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -95,7 +97,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <BsDownload className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl text-[4rem] mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
+      <BsDownload className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",

@@ -50,7 +50,7 @@ const products = [
 ];
 const Products = () => {
   return (
-    <div className="products  flex flex-col md:items-center md:justify-center md-gap-7 ">
+    <div className="flex flex-col justify-center lg:items-center  ">
       {products.map((product, index) => {
         const { title, image, button, icon, description, isPositionReverse } =
           product;
@@ -66,9 +66,9 @@ const Products = () => {
           />
         );
       })}
-      <div className=" w-[100vw] h-[200px] z-[-10] mb-4 p-2 md:h-[400px] md:max-w-[600px] rounded-lg lg:w-[100vw] lg:flex items-center justify-center ">
+      <div className=" m-auto md:w-[45rem] md:h-[25rem] lg:my-[2rem] md:translate-y-[14rem]">
         <video
-          className="w-[100%] h-[100%] lg:w-[800px] rounded-lg  object-cover"
+          className=" rounded-lg  object-contain"
           src="/products-video.mp4"
           controls
         />

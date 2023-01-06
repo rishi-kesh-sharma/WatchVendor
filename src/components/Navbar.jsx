@@ -28,7 +28,7 @@ const Navbar = () => {
     <div className="fixed min-h-[100px] ">
       {!show && (
         <FiMenu
-          className="fixed z-30 top-6 right-3 text-3xl font-extralight md:hidden"
+          className="fixed z-[5000] top-6 right-3 text-3xl font-extralight md:hidden"
           onClick={(e) => setShow(true)}
         />
       )}
@@ -73,7 +73,7 @@ const Navbar = () => {
         </ul>
       )}
       {!isOnSmDevice && (
-        <ul className=" fixed hidden  z-40 md:z-50 left-0 right-0 top-[2rem] md:flex  w-[100vw] items-center justify-center h-[40px] md:top-0  md:bg-white  md:h-[60px] ">
+        <ul className=" fixed hidden bg-transparent  z-40 md:z-50 left-0 right-0 top-[2rem] md:flex  w-[100vw] items-center justify-center h-[40px] md:top-0  md:h-[60px] ">
           <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/">Home</a>
           </li>
