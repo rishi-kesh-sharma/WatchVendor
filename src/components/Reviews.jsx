@@ -25,71 +25,42 @@ const Reviews = () => {
           slidesToShow: 1,
         },
       },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
     ],
   };
   return (
-    // <div className="reviews overflow-hidden z-[-100] w-[100vw] p-5 lg:px-[200px] lg:overflow-hidden">
-    //   `
-    //   <Carousel
-    //     style={{ zIndex: "-10", border: "2px solid red" }}
-    //     className="carousel"
-    //     cols={2}
-    //     rows={1}
-    //     gap={20}
-    //     loop
-    //   >
-    //     {users.map((user, index) => {
-    //       return (
-    //         <Carousel.Item style={{ zIndex: "-10" }}>
-    //           <div
-    //             key={index}
-    //             className="eachCard z-[-100] flex flex-col my-2 gap-2"
-    //           >
-    //             <div className="h-[40px] flex gap-4">
-    //               <img
-    //                 src={user.profile}
-    //                 alt=""
-    //                 className="h-[30px] w-[30px] rounded-full"
-    //               />
-    //               <div className="flex gap-1 text-yellow-300">
-    //                 {user.stars.map((star) => star)}
-    //               </div>
-    //             </div>
-    //             <p className="opacity-50 z-[-10]">client</p>
-    //             <h2 className="font-bold">{user.name}</h2>
-    //             <p className="opacity-60 text-sm">{user.data}</p>
-    //             <div className=" text-sm flex gap-3 opacity-50">
-    //               <AiOutlineCalendar className="text-lg" />
-    //               <p className="text-sm">20- Nov-2022</p>
-    //             </div>
-    //           </div>
-    //         </Carousel.Item>
-    //       );
-    //     })}
-    //   </Carousel>
-    // </div>
-
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="h-[30rem]"
-    >
+      className="h-[30rem]">
       <div>
         <BsChevronLeft
           style={{ fontSize: "1.5rem", cursor: "pointer" }}
           onClick={() => arrowRef.current.slickPrev()}
         />
       </div>
-      <Slider {...settings} ref={arrowRef}>
+      <Slider
+        className="z-[-10]"
+        style={{ zIndex: -100 }}
+        {...settings}
+        ref={arrowRef}>
         {users.map((user, index) => {
           return (
-            <div
-              key={index}
-              className="eachCard z-[-100] flex flex-col my-2 gap-2"
-            >
+            <div key={index} className="eachCard flex flex-col my-2 gap-2">
               <div className="h-[40px] flex gap-4">
                 <img
                   src={user.profile}
@@ -100,10 +71,10 @@ const Reviews = () => {
                   {user.stars.map((star) => star)}
                 </div>
               </div>
-              <p className="opacity-50 z-[-10]">client</p>
+              <p className="text-[#919191] ">client</p>
               <h2 className="font-bold">{user.name}</h2>
-              <p className="opacity-60 text-sm">{user.data}</p>
-              <div className=" text-sm flex gap-3 opacity-50">
+              <p className=" text-xs text-[#919191] md:text-sm">{user.data}</p>
+              <div className="  text-sm flex gap-3 text-[#919191]">
                 <AiOutlineCalendar className="text-lg" />
                 <p className="text-sm">20- Nov-2022</p>
               </div>

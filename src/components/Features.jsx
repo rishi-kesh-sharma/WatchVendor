@@ -17,13 +17,12 @@ const Features = () => {
           return (
             <div
               key={index}
-              className="  flex items-center pr-4  md:text-justify  md:max-w-[30%]  md:gap-2 "
-            >
+              className="  flex items-center pr-4  md:text-justify  md:max-w-[30%]  md:gap-2 ">
               <div className="flex-1">
                 <h2 className=" title text-sm font-bold   md:text-sm lg:mx-0 lg:text-lg">
                   {title}
                 </h2>
-                <p className="description text-xs opacity-50 max  md:text-sm lg:pr-[0] lg:text-sm">
+                <p className="description text-xs text-[#919191] max  md:text-sm lg:pr-[0] lg:text-sm">
                   {description}
                 </p>
               </div>

@@ -66,9 +66,11 @@ const Products = () => {
           />
         );
       })}
-      <div className=" m-auto md:w-[45rem] md:h-[25rem] lg:my-[2rem] md:translate-y-[14rem]">
+      <div
+        className=" m-auto md:w-[45rem] md:h-[25rem] lg:my-[2rem] md:translate-y-[14rem]"
+        style={{ zIndex: -1 }}>
         <video
-          className=" rounded-lg  object-contain"
+          className=" rounded-lg  object-contain "
           src="/products-video.mp4"
           controls
         />

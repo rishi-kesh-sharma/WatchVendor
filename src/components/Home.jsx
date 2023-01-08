@@ -21,11 +21,11 @@ const Home = () => {
     <div className="mt-[4rem]">
       <div className="flex flex-wrap items-center justify-center  w-[80vw] m-auto md:flex-nowrap">
         <div className="flex max-w-[22rem] flex-col">
-          <h1 className=" lg:text-[2.5rem] font-semibold">
+          <h1 className=" text-[2rem] lg:text-[2.5rem] font-semibold">
             {" "}
             Landing page for showcase watch
           </h1>
-          <p className="">
+          <p className="mt-[2rem]">
             {" "}
             minus odio molestias dignissimos porro eveniet. Tempore ducimus
             aperiam, repellendus similique repellat quidem atque voluptate autem
