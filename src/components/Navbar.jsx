@@ -41,7 +41,7 @@ const Navbar = () => {
 
       {/* navbar for small device */}
       {show && isOnSmDevice && (
-        <ul className="fixed left-0 z-40  right-0 top-0 flex flex-col w-[100vw] items-center justify-around h-[100vh] bg-white  md:hidden lg:hidden">
+        <ul className="fixed left-0 z-40  right-0 top-0 flex flex-col w-[100vw] items-center justify-around h-[100vh] bg-white py-[3rem] md:hidden lg:hidden">
           <li className="m-2 text-lg font-semibold  ">
             <a href="/">Home</a>
           </li>
@@ -73,7 +73,7 @@ const Navbar = () => {
         </ul>
       )}
       {!isOnSmDevice && (
-        <ul className=" fixed hidden bg-transparent  z-50 md:z-50 left-0 right-0 top-[2rem] md:flex  w-[100vw] items-center justify-center h-[40px] md:top-0  md:h-[60px] ">
+        <ul className=" fixed hidden bg-white  z-50 md:z-50 left-0 right-0 top-0 md:flex  w-[100vw] items-center justify-center h-[40px]   md:h-[60px] ">
           <li className="m-5 text-lg font-semibold  md:text-sm  ">
             <a href="/">Home</a>
           </li>

@@ -6,15 +6,16 @@ import { BiDonateBlood } from "react-icons/bi";
 import React from "react";
 function Footer() {
   return (
-    <div className="footerContainer bg-[url(footer-background.png)]">
+    <div className="footerContainer bg-[url(footer-background.png)] bg-contain">
       {/* in grid */}
 
       <div className="footerContent ">
-        <div className="fotterFirstOne">
+        <div className="footerFirstOne">
           <BiDonateBlood className=" text-white text-2xl" />
           <span
             // className="logoText"
-            style={{ fontSize: "1.25rem", color: "#fff" }}>
+            style={{ fontSize: "1.25rem", color: "#fff" }}
+          >
             <span style={{ fontSize: "1.5rem", color: "#fff" }}>B</span>Donor
           </span>
         </div>

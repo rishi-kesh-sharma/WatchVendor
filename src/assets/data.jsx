@@ -1,5 +1,6 @@
-import { MdDashboardCustomize } from "react-icons/md";
-import { AiFillSetting, AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
+import { CiSettings } from "react-icons/ci";
+import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 
 import { BsDownload, BsShare } from "react-icons/bs";
 import { BiLike } from "react-icons/bi";
@@ -54,7 +55,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <AiFillSetting className="  cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-1 lg:text-6xl lg:p-2 " />
+      <CiSettings className="  cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-1 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -62,7 +63,7 @@ const features = [
   {
     title: "Lorem Impulse Topic",
     icon: (
-      <AiFillSetting className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
+      <HiOutlineAdjustmentsVertical className=" cursor-pointer m-auto bg-[#C6BFFB] color-[#2F2F2F] text-5xl  mt-2 rounded-full   p-2  md:text-5xl md:p-2 lg:text-6xl lg:p-2 " />
     ),
     description:
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
@@ -76,7 +77,7 @@ const features = [
       "   Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint   aliquid beatae magnam est ab, iusto labore totam vero dicta velit nam id quasi, quos ratione. Vero porro deleniti perferendis?`",
   },
   {
-    centerImage: <CenterImage />,
+    centerImage: <CenterImage key={"center image"} />,
   },
   {
     title: "Lorem Impulse Topic",
@@ -163,10 +164,10 @@ const users = [
     from: "kathmandu",
     data: "Lorem Ipsum is simply dummy text of the printing simply dummy. Lorem Ipsum is a simply dummy text of the printing simply dummy. Lorem Ipsum is simply dummy text of the printing simply dummy. ",
     stars: [
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
+      <AiFillStar className="starImg" key={"1"} />,
+      <AiFillStar className="starImg" key={"2"} />,
+      <AiFillStar className="starImg" key={"3"} />,
+      <AiFillStar className="starImg" key={"4"} />,
     ],
   },
   {
@@ -175,10 +176,10 @@ const users = [
     from: "kathmandu",
     data: "Lorem Ipsum is simply dummy text of the printing simply dummy. Lorem Ipsum is a simply dummy text of the printing simply dummy. Lorem Ipsum is simply dummy text of the printing simply dummy. ",
     stars: [
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
+      <AiFillStar className="starImg" key={"1"} />,
+      <AiFillStar className="starImg" key={"2"} />,
+      <AiFillStar className="starImg" key={"3"} />,
+      <AiFillStar className="starImg" key={"4"} />,
     ],
   },
   {
@@ -187,10 +188,10 @@ const users = [
     from: "kathmandu",
     data: "Lorem Ipsum is simply dummy text of the printing simply dummy. Lorem Ipsum is a simply dummy text of the printing simply dummy. Lorem Ipsum is simply dummy text of the printing simply dummy. ",
     stars: [
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
+      <AiFillStar className="starImg" key={"1"} />,
+      <AiFillStar className="starImg" key={"2"} />,
+      <AiFillStar className="starImg" key={"3"} />,
+      <AiFillStar className="starImg" key={"4"} />,
     ],
   },
   {
@@ -199,10 +200,10 @@ const users = [
     from: "kathmandu",
     data: "Lorem Ipsum is simply dummy text of the printing simply dummy. Lorem Ipsum is a simply dummy text of the printing simply dummy. Lorem Ipsum is simply dummy text of the printing simply dummy. ",
     stars: [
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
+      <AiFillStar className="starImg" key={"1"} />,
+      <AiFillStar className="starImg" key={"2"} />,
+      <AiFillStar className="starImg" key={"3"} />,
+      <AiFillStar className="starImg" key={"4"} />,
     ],
   },
   {
@@ -211,10 +212,10 @@ const users = [
     from: "kathmandu",
     data: "Lorem Ipsum is simply dummy text of the printing simply dummy. Lorem Ipsum is a simply dummy text of the printing simply dummy. Lorem Ipsum is simply dummy text of the printing simply dummy. ",
     stars: [
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
-      <AiFillStar className="starImg" />,
+      <AiFillStar className="starImg" key={"1"} />,
+      <AiFillStar className="starImg" key={"2"} />,
+      <AiFillStar className="starImg" key={"3"} />,
+      <AiFillStar className="starImg" key={"4"} />,
     ],
   },
 ];

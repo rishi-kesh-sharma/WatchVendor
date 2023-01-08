@@ -4,7 +4,7 @@ const Card = ({ icon, title, count }) => {
     <div className=" card h-[5rem]  w-[8rem] home_card">
       {icon}
       <h2 className="font-bold md:text-lg">{count}</h2>
-      <p className="text-xs font-bold md:text-lg "> {title}</p>
+      <p className="text-xs font-semi md:text-sm "> {title}</p>
     </div>
   );
 };

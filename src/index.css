@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +8,9 @@
 }
 body {
   overflow-x: hidden !important;
+}
+* {
+  font-family: poppins;
 }
 .container {
   border: 2px solid red;
@@ -59,7 +63,7 @@ html {
 .eachCard {
   height: fit-content;
   background: #ffffff;
-  box-shadow: 0px 0px 20px 1px rgba(125, 125, 125, 0.25);
+  box-shadow: 0px 0px 10px 1px rgba(125, 125, 125, 0.25);
   border-radius: 0.75rem;
   padding: 1rem;
 }
@@ -134,14 +138,15 @@ html {
   height: fit-content;
   align-items: center;
   justify-content: center;
-  padding-bottom: 8em;
+  padding: 1rem 1rem 8rem 1rem;
 }
 .footerContent {
   margin-top: 20em;
   display: grid;
+  justify-items: center;
   margin-bottom: 2em;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 1fr 1fr;
 
   grid-template-areas:
     "logo . . ."
@@ -317,15 +322,15 @@ html {
 @media screen and (max-width: 912px) {
   .footerContent {
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
-    grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 540px) {
+/* @media screen and (max-width: 540px) {
   .footerContent {
     width: 90%;
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 0.6fr 0.6fr 0.1fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+    grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
   }
   .linkImage {
     width: 20px;
@@ -334,13 +339,13 @@ html {
   .footerLinks {
     justify-content: space-evenly;
   }
-}
+} */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 660px) {
   .footerContent {
     width: 95%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 4fr 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
 
     grid-template-areas:
       "logo email social social"
@@ -371,10 +376,32 @@ html {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .img,
   .linkImage {
     width: 15px;
     height: 100%;
+  }
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-areas:
+      "logo ."
+      "email ."
+      "service about"
+      "service1 aboutus"
+      "service2 contactus"
+      "service3 home"
+      "service4 blog"
+      ". donate"
+      "addr addr"
+      "street street"
+      "loc loc"
+      "postal postal"
+      ". . "
+      "bd bd "
+      ". ."
+      ". ."
+      "app app";
   }
 }

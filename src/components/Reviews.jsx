@@ -7,6 +7,7 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { BiDotsVerticalRounded } from "react-icons/bi";
 
 const Reviews = () => {
   const arrowRef = useRef(null);
@@ -46,7 +47,8 @@ const Reviews = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="h-[30rem]">
+      className="h-[20rem]  lg:h-[30rem]"
+    >
       <div>
         <BsChevronLeft
           style={{ fontSize: "1.5rem", cursor: "pointer" }}
@@ -57,22 +59,27 @@ const Reviews = () => {
         className="z-[-10]"
         style={{ zIndex: -100 }}
         {...settings}
-        ref={arrowRef}>
+        ref={arrowRef}
+      >
         {users.map((user, index) => {
           return (
-            <div key={index} className="eachCard flex flex-col my-2 gap-2">
-              <div className="h-[40px] flex gap-4">
-                <img
-                  src={user.profile}
-                  alt=""
-                  className="h-[30px] w-[30px] rounded-full"
-                />
-                <div className="flex gap-1 text-yellow-300">
-                  {user.stars.map((star) => star)}
+            <div key={index} className="eachCard flex flex-col my-2 ">
+              <div className="flex items-start justify-between py-[0.3rem]">
+                <div className="h-[40px] flex gap-4">
+                  <img
+                    src={user.profile}
+                    alt=""
+                    className="h-[30px] w-[30px] rounded-full"
+                  />
+                  <div className="flex gap-1 text-yellow-300">
+                    {user.stars.map((star) => star)}
+                  </div>
                 </div>
+                <BiDotsVerticalRounded className="text-xl" />
               </div>
-              <p className="text-[#919191] ">client</p>
-              <h2 className="font-bold">{user.name}</h2>
+              <hr />
+              <p className="text-[#919191] my-[0.4rem] ">client</p>
+              <h2 className="font-semibold my-[0.3rem]">{user.name}</h2>
               <p className=" text-xs text-[#919191] md:text-sm">{user.data}</p>
               <div className="  text-sm flex gap-3 text-[#919191]">
                 <AiOutlineCalendar className="text-lg" />

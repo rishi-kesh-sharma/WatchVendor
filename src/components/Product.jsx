@@ -13,7 +13,7 @@ const Product = ({
       <div className="bg-[url(hexagon.png)] grid place-items-center h-[30rem] w-[25rem] bg-center  bg-contain  bg-no-repeat md:p-7 lg:flex-1 ">
         <img className="md:object-contain " src={image} alt={title} />
       </div>
-      <div className=" flex flex-col items-center p-4 gap-4 text-center md:max-w-[25rem]  lg:flex-1 ">
+      <div className=" flex flex-col items-center p-4 gap-4 text-center md:max-w-[25rem] max-w-[20rem]   lg:flex-1 ">
         <div style={{ width: "100%" }}>{icon}</div>
         <h2 className="font-semibold text-xl  md:text-2xl lg:text-3xl text-start">
           {title}
