@@ -19,15 +19,16 @@ const Button = styled.button`
 const products = [
   {
     icon: (
-      <CiSettings className="font-semibold text-5xl bg-[#C6BFFB] p-[10px] rounded  md:text-5xl md:rounded-lg md:p-y lg:text-7xl" />
+      <CiSettings className="font-semibold text-5xl bg-[#C6BFFB] p-[10px] rounded  md:text-5xl md:rounded-lg  lg:text-7xl" />
     ),
     title: "Best for organize and  customize easily",
     description:
       "Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the   industry's standard dummy text ever since the 1500s,",
     button: (
-      <button className="bg-[#bd87f6] px-3 py-1 text-white rounded-xl md:rounded-xl lg:rounded-3xl lg:px-[2rem] lg:py-[0.5rem]">
+      <button className="bg-[#bd87f6] px-3 py-1 text-white rounded-xl md:rounded-xl lg:rounded-3xl ">
         Get Now
       </button>
+      // lg:px-[2rem] lg:py-[0.5rem]
     ),
     image: "product1.png",
     isPositionReverse: false,
@@ -52,7 +53,10 @@ const Products = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef();
   return (
-    <div className="flex flex-col justify-center lg:items-center gap-[6rem]  ">
+    <div
+      className="flex max-h-[2900px]  flex-col mt-[4rem] gap-[4rem] justify-center sm:mt-[5rem] sm:gap-[1rem] md:mt-[6rem] sm:max-h-[3000px]    lg:items-center lg:gap-[3rem] md:max-h-[2000px]  xl:max-h-[1900px] 2xl:max-h-[2200px]"
+      id="overview"
+    >
       {products.map((product, index) => {
         const { title, image, button, icon, description, isPositionReverse } =
           product;
@@ -64,29 +68,27 @@ const Products = () => {
             button={button}
             icon={icon}
             description={description}
-            isPositionReverse={isPositionReverse}
           />
         );
       })}
-      <div
-        className=" relative m-auto md:w-[45rem] md:h-[25rem] lg:my-[2rem] md:translate-y-[18rem] lg:translate-y-[22rem]"
-        // style={{ zIndex: -1 }}
-      >
+      <div className=" relative  w-[90%] max-w-[50rem] z-[2] mx-auto   md:mt-[5rem]  lg:my-[2rem] ">
         <div
-          className={`overlay absolute top-0 left-0 right-0 bottom-0 md:bottom-[-0.3rem] ${
+          className={`overlay absolute  top-0 left-0 right-0  bottom-0  ${
             !isPlaying && "bg-blue-400"
-          }  rounded-lg  z-40 opacity-40`}
+          }  rounded-lg  opacity-40`}
         ></div>
-        <div className=" cursor-pointer  bg-purple-600 rounded-full h-[5.5rem] w-[5.5rem] md:h-[8rem] md:w-[8rem] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]   flex justify-center items-center z-50">
-          {isPlaying ? (
+        {isPlaying ? (
+          <div className=" cursor-pointer  bg-purple-600 rounded-full h-[3rem] w-[3rem] md:h-[3rem] md:w-[3rem] absolute bottom-[0%] right-[0%] translate-x-[-50%] translate-y-[-50%]   flex justify-center items-center ">
             <FiPauseCircle
-              className="text-white text-[4rem] md:text-[6.5rem]  "
+              className="text-white text-[4rem] md:text-[6.5rem] z-[100] "
               onClick={(e) => {
                 videoRef.current.pause();
                 setIsPlaying(false);
               }}
             />
-          ) : (
+          </div>
+        ) : (
+          <div className=" cursor-pointer  bg-purple-600 rounded-full h-[5.5rem] w-[5.5rem] md:h-[8rem] md:w-[8rem] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]   flex justify-center items-center ">
             <AiFillPlayCircle
               className="text-white text-[4rem] md:text-[6.5rem]  "
               onClick={(e) => {
@@ -94,20 +96,21 @@ const Products = () => {
                 setIsPlaying(true);
               }}
             />
-          )}
-        </div>
-
+          </div>
+        )}
         <video
+          style={{ zIndex: -1 }}
           ref={videoRef}
-          className="relative rounded-lg  object-contain "
+          className="relative rounded-lg object-contain"
           src="/products-video.mp4"
           // controls
         ></video>
       </div>
       <Features />
-      {console.log()}
     </div>
   );
 };
 
 export default Products;
+
+// : (

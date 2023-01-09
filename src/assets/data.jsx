@@ -39,10 +39,10 @@ const homeCardData = [
 
 const CenterImage = () => {
   return (
-    <div className="w-[100%] lg:w-[30%]">
-      <div className="h-[100%] grid place-items-center bg-[url(hexagon.png)] bg-no-repeat  md:bg-contain p-10 bg-center  ">
+    <div className="w-[100%] lg:w-[35%]">
+      <div className="w-[90%] max-w-[25rem] mx-auto grid place-items-center bg-[url(hexagon.png)] bg-contain bg-no-repeat  md:bg-contain p-10 bg-center  ">
         <img
-          className="object-contain  lg:h-[500px] lg:w-[500px]"
+          className="object-contain w-[100%] max-w-[25rem]  lg:h-[500px] lg:w-[90%] lg:max-w-[500px]"
           src="product2.png"
           alt=""
         />

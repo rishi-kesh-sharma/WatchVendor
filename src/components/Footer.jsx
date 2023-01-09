@@ -6,9 +6,7 @@ import { BiDonateBlood } from "react-icons/bi";
 import React from "react";
 function Footer() {
   return (
-    <div className="footerContainer bg-[url(footer-background.png)] bg-contain">
-      {/* in grid */}
-
+    <div className="footerContainer max-h-[500px] bg-[url(footer-background.png)] bg-contain ">
       <div className="footerContent ">
         <div className="footerFirstOne">
           <BiDonateBlood className=" text-white text-2xl" />

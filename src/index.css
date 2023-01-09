@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .home_card {
   @apply h-[8rem] w-[12rem] shadow-xl rounded-lg flex items-start justify-center flex-col pl-9;
 }
@@ -322,11 +326,11 @@ html {
 @media screen and (max-width: 912px) {
   .footerContent {
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
-    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 1fr 1;
   }
 }
 
-/* @media screen and (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .footerContent {
     width: 90%;
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -339,16 +343,17 @@ html {
   .footerLinks {
     justify-content: space-evenly;
   }
-} */
+}
 
 @media screen and (max-width: 660px) {
   .footerContent {
     width: 95%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 4fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 3fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr;
 
     grid-template-areas:
       "logo email social social"
+      ". . . ."
       "service about addr addr"
       ". . . ."
       "service1 aboutus street street"
@@ -382,22 +387,37 @@ html {
     width: 15px;
     height: 100%;
   }
+  .by {
+    justify-self: center;
+  }
   .footerContent {
+    height: 36rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-rows: repeat(26, 1fr);
     grid-template-areas:
+      " . ."
+      ". ."
       "logo ."
       "email ."
+      ". ."
+      ". ."
+      ". ."
       "service about"
+      ". ."
       "service1 aboutus"
       "service2 contactus"
       "service3 home"
       "service4 blog"
       ". donate"
+      ". ."
+      ". ."
       "addr addr"
+      ". ."
       "street street"
       "loc loc"
       "postal postal"
+      ". . "
+      ". . "
       ". . "
       "bd bd "
       ". ."

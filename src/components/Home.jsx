@@ -6,8 +6,8 @@ import styled from "styled-components";
 
 const Button = styled.button`
   box-sizing: border-box;
-  width: ${(props) => (props.mdWidth ? props.mdWidth : " 109px")};
-  height: ${(props) => (props.mdHeight ? props.mdHeight : " 35px")};
+  width: ${(props) => (props.mdWidth ? props.mdWidth : "7rem")};
+  height: ${(props) => (props.mdHeight ? props.mdHeight : " 2.3rem")};
   font-size: ${(props) => (props.mdTextSize ? props.mdTextSize : " ")};
   background: ${(props) =>
     props.transparent ? props.transparent : " #bd87f6"};
@@ -18,14 +18,14 @@ const Button = styled.button`
 `;
 const Home = () => {
   return (
-    <div className="mt-[4rem]">
-      <div className="flex flex-wrap items-center justify-center  w-[80vw] m-auto md:flex-nowrap">
+    <div className="mt-[4rem] " id="home">
+      <div className="flex flex-wrap items-center justify-center  w-[80vw] m-auto md:flex-nowrap xl:gap-[8rem] 2xl:gap-[12rem]">
         <div className="flex max-w-[22rem] flex-col">
-          <h1 className=" text-[2rem] lg:text-[2.5rem] font-semibold">
+          <h1 className=" text-[2rem] lg:text-[2.5rem] font-semibold xl:text-[3rem]">
             {" "}
             Landing page for showcase watch
           </h1>
-          <p className="mt-[2rem]">
+          <p className="mt-[2rem] xl:text-[1.3rem]">
             {" "}
             minus odio molestias dignissimos porro eveniet. Tempore ducimus
             aperiam, repellendus similique repellat quidem atque voluptate autem
@@ -42,7 +42,7 @@ const Home = () => {
           <img className="w-[100%]" src="homewatchimage.png" alt="" />
         </div>
       </div>
-      <div className=" flex flex-wrap gap-[1rem] justify-center align-center my-[2rem] md:my-[6rem] lg:my-[15rem] ">
+      <div className=" grid gap-[1rem] mt-[2rem] px-[5rem]  grid-cols-1 grid-rows-4 place-items-center  sm:grid-rows-2 sm:grid-cols-2 sm:gap-[2rem] md:px-[3rem] md:grid-rows-1 md:grid-cols-4 lg:grid-rows-1 md:gap-[2rem] lg:mt-[2rem]   md:my-[4rem] lg:mb-[10rem]  lg:mx-[1rem]  xl:mt-[8rem] 2xl:mx-[10rem] 2xl:mt-[20rem]">
         {cardData.map((cardItem, index) => {
           const { title, count, icon } = cardItem;
           return <Card key={index} title={title} count={count} icon={icon} />;

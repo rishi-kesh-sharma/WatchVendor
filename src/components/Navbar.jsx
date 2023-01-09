@@ -5,8 +5,8 @@ import { RxCross1 } from "react-icons/rx";
 
 const Button = styled.button`
   box-sizing: border-box;
-  width: ${(props) => (props.mdWidth ? props.mdWidth : "30px")};
-  height: ${(props) => (props.mdHeight ? props.mdHeight : "30px")};
+  width: ${(props) => (props.mdWidth ? props.mdWidth : "md:2rem")};
+  height: ${(props) => (props.mdHeight ? props.mdHeight : "md:2rem")};
   background: #bd87f6;
   border-radius: 16px;
   color: white;
@@ -14,10 +14,16 @@ const Button = styled.button`
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [isOnSmDevice, setIsOnSmDevice] = useState(false);
+  const [whiteBackground, setWhiteBackground] = useState(false);
   const handleResize = (e) => {
     if (window.innerWidth > 768) return setIsOnSmDevice(false);
     setIsOnSmDevice(true);
   };
+
+  addEventListener("scroll", (e) => {
+    if (window.scrollY > 100) return setWhiteBackground(true);
+    setWhiteBackground(false);
+  });
 
   useEffect(() => {
     if (window.innerWidth > 768) return setIsOnSmDevice(false);
@@ -25,7 +31,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed min-h-[100px] ">
+    <div className="fixed min-h-[100px] " style={{ zIndex: 1000 }}>
       {!show && (
         <FiMenu
           className="fixed z-[5000] top-6 right-3 text-3xl font-extralight md:hidden"
@@ -73,24 +79,29 @@ const Navbar = () => {
         </ul>
       )}
       {!isOnSmDevice && (
-        <ul className=" fixed hidden bg-white  z-50 md:z-50 left-0 right-0 top-0 md:flex  w-[100vw] items-center justify-center h-[40px]   md:h-[60px] ">
-          <li className="m-5 text-lg font-semibold  md:text-sm  ">
-            <a href="/">Home</a>
+        <ul
+          style={{ zIndex: 1000 }}
+          className={`fixed hidden  left-0 right-0  md:flex  w-[100vw] items-center justify-center h-[5rem]   md:h-[4rem] ${
+            whiteBackground ? "bg-white " : "bg-transparent"
+          }`}
+        >
+          <li className="mx-[1rem] py-[0.4rem] text-lg font-semibold  md:text-sm  ">
+            <a href="#home">Home</a>
           </li>
 
-          <li className="m-5 text-lg font-semibold  md:text-sm  ">
-            <a href="/overview">Overview</a>
+          <li className="mx-[1rem] text-lg font-semibold  md:text-sm  ">
+            <a href="#overview">Overview</a>
           </li>
-          <li className="m-5 text-lg font-semibold  md:text-sm  ">
-            <a href="/features">Features</a>
+          <li className="mx-[1rem] text-lg font-semibold  md:text-sm  ">
+            <a href="#features">Features</a>
           </li>
-          <li className="m-5 text-lg font-semibold  md:text-sm  ">
-            <a href="/screenshots">Screenshots</a>
+          <li className="mx-[1rem] text-lg font-semibold  md:text-sm  ">
+            <a href="#testimonials">Screenshots</a>
           </li>
-          <li className="m-5 text-lg font-semibold  md:text-sm  ">
+          <li className="mx-[1rem] text-lg font-semibold  md:text-sm  ">
             <a href="/blog">Blog</a>
           </li>
-          <li className="m-5 text-lg font-semibold  md:text-sm  ">
+          <li className="mx-[1rem] text-lg font-semibold  md:text-sm  ">
             <a href="/buy">
               <Button mdWidth={"110px"} mdHeight={"40px"}>
                 Buy Now

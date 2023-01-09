@@ -21,19 +21,19 @@ const Reviews = () => {
     className: "carousel",
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1300,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 1300,
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
         },
@@ -42,12 +42,13 @@ const Reviews = () => {
   };
   return (
     <div
+      id="testimonials"
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="h-[20rem]  lg:h-[30rem]"
+      className="h-[22rem]  "
     >
       <div>
         <BsChevronLeft
@@ -55,16 +56,17 @@ const Reviews = () => {
           onClick={() => arrowRef.current.slickPrev()}
         />
       </div>
-      <Slider
-        className="z-[-10]"
-        style={{ zIndex: -100 }}
-        {...settings}
-        ref={arrowRef}
-      >
+      <Slider style={{ zIndex: -10000 }} {...settings} ref={arrowRef}>
         {users.map((user, index) => {
           return (
-            <div key={index} className="eachCard flex flex-col my-2 ">
-              <div className="flex items-start justify-between py-[0.3rem]">
+            <div
+              key={index}
+              className="eachCard flex flex-col   "
+              style={{
+                zIndex: -10000,
+              }}
+            >
+              <div className="flex items-start justify-between  py-[0.3rem]">
                 <div className="h-[40px] flex gap-4">
                   <img
                     src={user.profile}
@@ -81,9 +83,9 @@ const Reviews = () => {
               <p className="text-[#919191] my-[0.4rem] ">client</p>
               <h2 className="font-semibold my-[0.3rem]">{user.name}</h2>
               <p className=" text-xs text-[#919191] md:text-sm">{user.data}</p>
-              <div className="  text-sm flex gap-3 text-[#919191]">
+              <div className="  text-sm flex gap-3 text-[#919191] mt-[0.4rem]">
                 <AiOutlineCalendar className="text-lg" />
-                <p className="text-sm">20- Nov-2022</p>
+                <p className="text-xs ">20- Nov-2022</p>
               </div>
             </div>
           );
