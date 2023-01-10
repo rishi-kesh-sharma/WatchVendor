@@ -48,14 +48,15 @@ const Reviews = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="h-[22rem]">
+      className="h-[22rem]"
+    >
       <div>
         <BsChevronLeft
           style={{ fontSize: "1.5rem", cursor: "pointer" }}
           onClick={() => arrowRef.current.slickPrev()}
         />
       </div>
-      <Slider style={{ zIndex: -10000 }} {...settings} ref={arrowRef}>
+      <Slider {...settings} ref={arrowRef}>
         {users.map((user, index) => {
           return (
             <div
@@ -63,7 +64,8 @@ const Reviews = () => {
               className="eachCard flex flex-col   "
               style={{
                 zIndex: -10000,
-              }}>
+              }}
+            >
               <div className="flex items-start justify-between  py-[0.3rem]">
                 <div className="h-[40px] flex gap-4">
                   <img
