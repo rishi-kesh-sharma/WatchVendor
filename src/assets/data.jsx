@@ -9,31 +9,65 @@ import { IoExpandOutline } from "react-icons/io5";
 const homeCardData = [
   {
     icon: (
-      <BsDownload className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
+      <BsDownload className="font-extrabold text-3xl bg-[#C6BFFB] p-[0.4rem] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total downloads",
     count: "1.4M +",
   },
   {
     icon: (
-      <BiLike className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
+      <BiLike className="font-extrabold text-3xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total reviews",
     count: "1.2M +",
   },
   {
     icon: (
-      <BsShare className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
+      <BsShare className="font-extrabold text-3xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total shares",
     count: "1M +",
   },
   {
     icon: (
-      <IoExpandOutline className="font-extrabold text-2xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
+      <IoExpandOutline className="font-extrabold text-3xl bg-[#C6BFFB] p-[3px] rounded md:text-3xl  md:rounded-md md:my-1 md:p-1 " />
     ),
     title: "Total users",
     count: "1M +",
+  },
+];
+
+const products = [
+  {
+    icon: (
+      <CiSettings className="font-semibold text-5xl bg-[#C6BFFB] p-[10px] rounded  md:text-5xl md:rounded-lg  lg:text-7xl" />
+    ),
+    title: "Best for organize and  customize easily",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the   industry's standard dummy text ever since the 1500s,",
+    button: (
+      <button className="bg-[#bd87f6] px-3 py-1 text-white rounded-xl md:rounded-xl lg:rounded-3xl ">
+        Get Now
+      </button>
+      // lg:px-[2rem] lg:py-[0.5rem]
+    ),
+    image: "product1.png",
+    isPositionReverse: false,
+  },
+  {
+    icon: (
+      <HiOutlineAdjustmentsVertical className="font-semibold text-5xl bg-[#C6BFFB] p-[3px] rounded  md:text-5xl md:rounded-lg md:p-2 lg:text-7xl" />
+    ),
+    title: "Best for organize and customize easily",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the   industry's standard dummy text ever since the 1500s,",
+    button: (
+      <button className="bg-[#bd87f6] px-3 py-1 text-white  rounded-xl md:rounded-xl lg:rounded-3xl lg:px-[2rem] lg:py-[0.5rem]">
+        Get Now
+      </button>
+    ),
+    image: "product2.png",
+    isPositionReverse: true,
   },
 ];
 
@@ -221,4 +255,4 @@ const users = [
 ];
 export default users;
 
-export { features, footerLinks, homeCardData, users };
+export { features, footerLinks, homeCardData, users, products };

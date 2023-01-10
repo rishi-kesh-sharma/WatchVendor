@@ -21,20 +21,21 @@ const Navbar = () => {
   };
 
   addEventListener("scroll", (e) => {
-    if (window.scrollY > 100) return setWhiteBackground(true);
+    if (window.scrollY > 10) return setWhiteBackground(true);
     setWhiteBackground(false);
   });
 
+  addEventListener("resize", handleResize);
   useEffect(() => {
     if (window.innerWidth > 768) return setIsOnSmDevice(false);
     return setIsOnSmDevice(true);
   }, []);
 
   return (
-    <div className="fixed min-h-[100px] " style={{ zIndex: 1000 }}>
+    <div className="relative min-h-[100px] " style={{ zIndex: 1000 }}>
       {!show && (
         <FiMenu
-          className="fixed z-[5000] top-6 right-3 text-3xl font-extralight md:hidden"
+          className="fixed z-[5000] top-6 right-[3rem] text-3xl font-extralight md:hidden"
           onClick={(e) => setShow(true)}
         />
       )}
@@ -81,10 +82,9 @@ const Navbar = () => {
       {!isOnSmDevice && (
         <ul
           style={{ zIndex: 1000 }}
-          className={`fixed hidden  left-0 right-0  md:flex  w-[100vw] items-center justify-center h-[5rem]   md:h-[4rem] ${
+          className={`fixed hidden  left-0 right-0  top-0 md:flex  w-[100vw] items-center justify-center h-[5rem]   md:h-[4rem] ${
             whiteBackground ? "bg-white " : "bg-transparent"
-          }`}
-        >
+          }`}>
           <li className="mx-[1rem] py-[0.4rem] text-lg font-semibold  md:text-sm  ">
             <a href="#home">Home</a>
           </li>

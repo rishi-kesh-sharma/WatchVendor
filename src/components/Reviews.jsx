@@ -48,8 +48,7 @@ const Reviews = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="h-[22rem]  "
-    >
+      className="h-[22rem]">
       <div>
         <BsChevronLeft
           style={{ fontSize: "1.5rem", cursor: "pointer" }}
@@ -64,8 +63,7 @@ const Reviews = () => {
               className="eachCard flex flex-col   "
               style={{
                 zIndex: -10000,
-              }}
-            >
+              }}>
               <div className="flex items-start justify-between  py-[0.3rem]">
                 <div className="h-[40px] flex gap-4">
                   <img
@@ -80,12 +78,16 @@ const Reviews = () => {
                 <BiDotsVerticalRounded className="text-xl" />
               </div>
               <hr />
-              <p className="text-[#919191] my-[0.4rem] ">client</p>
+              <p className=" text-[0.8rem] text-[#919191] my-[0.4rem] ">
+                client
+              </p>
               <h2 className="font-semibold my-[0.3rem]">{user.name}</h2>
-              <p className=" text-xs text-[#919191] md:text-sm">{user.data}</p>
+              <p className=" text-[0.65rem] text-[#919191] md:text-sm">
+                {user.data}
+              </p>
               <div className="  text-sm flex gap-3 text-[#919191] mt-[0.4rem]">
                 <AiOutlineCalendar className="text-lg" />
-                <p className="text-xs ">20- Nov-2022</p>
+                <p className="text-[0.6rem] ">20- Nov-2022</p>
               </div>
             </div>
           );

@@ -31,6 +31,24 @@ html {
   font-size: clamp(16px, 1vw, 20px);
 }
 
+/* products video styling */
+.products-video:before {
+  content: "";
+  position: absolute;
+  /* z-index: -1; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -1rem;
+  /* clip-path: polygon(0 57%, 100% 21%, 100% 100%, 0% 100%);\
+   */
+  clip-path: polygon(0 45%, 100% 45%, 100% 99%, 0 99%);
+}
+.products-video {
+  position: relative;
+  background-size: 50% 50%;
+}
+
 /* STYLING REVIEWS SECTION */
 .userContainer {
   width: 100%;
@@ -150,7 +168,7 @@ html {
   justify-items: center;
   margin-bottom: 2em;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 1fr 1fr 3fr;
 
   grid-template-areas:
     "logo . . ."
@@ -160,10 +178,10 @@ html {
     ". service2 contactus loc"
     ". service3 home postal"
     ". service4 blog ."
-    "social . donate ."
+    ". . donate ."
     ". . . ."
-    ". . . ."
-    "bd bd app app";
+    "bd . app ."
+    ". . . .";
 }
 .copy {
   grid-area: bd;
@@ -326,7 +344,7 @@ html {
 @media screen and (max-width: 912px) {
   .footerContent {
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
-    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 1fr 1;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 1fr;
   }
 }
 

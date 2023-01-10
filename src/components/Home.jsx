@@ -18,14 +18,16 @@ const Button = styled.button`
 `;
 const Home = () => {
   return (
-    <div className="mt-[4rem] " id="home">
-      <div className="flex flex-wrap items-center justify-center  w-[80vw] m-auto md:flex-nowrap xl:gap-[8rem] 2xl:gap-[12rem]">
-        <div className="flex max-w-[22rem] flex-col">
+    <div
+      className="mt-[4rem]   max-h-[60rem] sm:min-h-[40rem] md:min-h-[22rem] md:max-h-[35rem] md:mt-[8rem] lg:mt-[6rem] xl:min-h-[40rem] 2xl:mt-[12rem]"
+      id="home">
+      <div className="flex flex-wrap items-center justify-center  w-[80vw] max-w-[70rem]  m-auto md:flex-nowrap  2xl:mt-[6rem] ">
+        <div className="flex max-w-[22rem] flex-col xl:max-w-[27rem] 2xl:max-w-[30rem]">
           <h1 className=" text-[2rem] lg:text-[2.5rem] font-semibold xl:text-[3rem]">
             {" "}
             Landing page for showcase watch
           </h1>
-          <p className="mt-[2rem] xl:text-[1.3rem]">
+          <p className=" text-gray-600 text-[0.8rem] mt-[1.6rem] xl:text-[1.3rem]">
             {" "}
             minus odio molestias dignissimos porro eveniet. Tempore ducimus
             aperiam, repellendus similique repellat quidem atque voluptate autem
@@ -38,15 +40,9 @@ const Home = () => {
             <Button transparent={"transparent"}>Add to Cart</Button>
           </div>
         </div>
-        <div className="w-[31rem] mt-[3rem]">
-          <img className="w-[100%]" src="homewatchimage.png" alt="" />
+        <div className="w-[90%] max-w-[30rem] mt-[3rem] mx-auto md:mt-0 lg:mt-[3rem]">
+          <img className="w-[90%]" src="homewatchimage.png" alt="" />
         </div>
-      </div>
-      <div className=" grid gap-[1rem] mt-[2rem] px-[5rem]  grid-cols-1 grid-rows-4 place-items-center  sm:grid-rows-2 sm:grid-cols-2 sm:gap-[2rem] md:px-[3rem] md:grid-rows-1 md:grid-cols-4 lg:grid-rows-1 md:gap-[2rem] lg:mt-[2rem]   md:my-[4rem] lg:mb-[10rem]  lg:mx-[1rem]  xl:mt-[8rem] 2xl:mx-[10rem] 2xl:mt-[20rem]">
-        {cardData.map((cardItem, index) => {
-          const { title, count, icon } = cardItem;
-          return <Card key={index} title={title} count={count} icon={icon} />;
-        })}
       </div>
     </div>
   );
