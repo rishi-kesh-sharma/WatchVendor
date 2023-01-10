@@ -48,7 +48,7 @@ const Reviews = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="h-[22rem]"
+      className="h-[22rem] mx-auto"
     >
       <div>
         <BsChevronLeft

@@ -74,7 +74,7 @@ const products = [
 const CenterImage = () => {
   return (
     <div className="w-[100%] lg:w-[35%]">
-      <div className="w-[90%] max-w-[25rem] mx-auto grid place-items-center bg-[url(hexagon.png)] bg-contain bg-no-repeat  md:bg-contain p-10 bg-center  ">
+      <div className="w-[80%] mx-auto max-w-[25rem]  grid place-items-start bg-[url(hexagon.png)] bg-contain bg-no-repeat  md:bg-contain p-10 bg-center  ">
         <img
           className="object-contain w-[100%] max-w-[25rem]  lg:h-[500px] lg:w-[90%] lg:max-w-[500px]"
           src="product2.png"
