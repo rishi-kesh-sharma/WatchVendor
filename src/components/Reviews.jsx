@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Carousel from "better-react-carousel";
 import { users } from "../assets/data";
 import Slider from "react-slick";
 
@@ -10,7 +9,10 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 
 const Reviews = () => {
+  // ref to arrows
   const arrowRef = useRef(null);
+
+  // setting for react-slick carousel
   const settings = {
     dots: true,
     infinite: true,

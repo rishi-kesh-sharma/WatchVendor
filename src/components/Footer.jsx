@@ -10,10 +10,7 @@ function Footer() {
       <div className="footerContent w-[80%] ">
         <div className="footerFirstOne">
           <BiDonateBlood className=" text-white text-2xl" />
-          <span
-            // className="logoText"
-            style={{ fontSize: "1.25rem", color: "#fff" }}
-          >
+          <span style={{ fontSize: "1.25rem", color: "#fff" }}>
             <span style={{ fontSize: "1.5rem", color: "#fff" }}>B</span>Donor
           </span>
         </div>

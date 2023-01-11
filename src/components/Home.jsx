@@ -4,6 +4,7 @@ import Card from "./Card";
 import { homeCardData as cardData } from "../assets/data";
 import styled from "styled-components";
 
+// styled button
 const Button = styled.button`
   box-sizing: border-box;
   width: ${(props) => (props.mdWidth ? props.mdWidth : "7rem")};

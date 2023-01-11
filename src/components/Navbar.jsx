@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FiMenu } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 
+// styled button
 const Button = styled.button`
   box-sizing: border-box;
   width: ${(props) => (props.mdWidth ? props.mdWidth : "md:2rem")};
@@ -20,20 +21,25 @@ const Navbar = () => {
     setIsOnSmDevice(true);
   };
 
+  // handle navLink clicks for small devices
   const handleNavLinksClick = (e) => {
     setShow(false);
   };
+
+  // listen scroll event
   addEventListener("scroll", (e) => {
     if (window.scrollY > 10) return setWhiteBackground(true);
     setWhiteBackground(false);
   });
 
+  // listen resive event
   addEventListener("resize", handleResize);
   useEffect(() => {
     if (window.innerWidth >= 768) return setIsOnSmDevice(false);
     return setIsOnSmDevice(true);
   }, []);
 
+  // jsx return
   return (
     <div className="relative min-h-[100px] " style={{ zIndex: 1000 }}>
       {!show && (
@@ -102,6 +108,8 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+
+      {/* navbar for medium and small devices */}
       {!isOnSmDevice && (
         <ul
           style={{ zIndex: 1000 }}

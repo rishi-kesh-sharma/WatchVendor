@@ -7,7 +7,7 @@ const Video = () => {
   const videoRef = useRef();
   return (
     <div className="w-[100%] products-video mt-[2rem] before:bg-slate-100 ">
-      <div className="relative w-[80%] mx-auto  max-w-[40rem] z-[2]    md:mt-[5rem] ">
+      <div className="relative w-[80%] mx-auto  max-w-[40rem] z-[2]  md:mt-[5rem] ">
         <div
           className={`overlay absolute  top-0 left-0 right-0  bottom-0 z-[2] ${
             !isPlaying && "bg-blue-400"
@@ -39,7 +39,6 @@ const Video = () => {
           ref={videoRef}
           className=" rounded-lg object-contain"
           src="/products-video.mp4"
-          // controls
         ></video>
       </div>
     </div>

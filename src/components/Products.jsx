@@ -8,6 +8,8 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { FiPauseCircle } from "react-icons/fi";
 import { products } from "../assets/data";
 
+// styled button
+
 const Button = styled.button`
   box-sizing: border-box;
   width: ${(props) => (props.mdWidth ? props.mdWidth : " 109px")};
