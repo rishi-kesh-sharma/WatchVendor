@@ -475,7 +475,7 @@ html {
 @media screen and (max-width: 550px) {
   .footerContent {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(26, 0.7fr);
+    grid-template-rows: repeat(26, 0.4fr);
     grid-template-areas:
       " . . . . . ."
       ". . . . . ."
