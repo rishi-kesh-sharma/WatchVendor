@@ -21,8 +21,9 @@ const Button = styled.button`
 const Products = () => {
   return (
     <div
-      className=" w-[100%] max-w-[70rem] mx-auto  flex-col mt-[4rem] gap-[4rem] justify-start items-start sm:mt-[5rem] sm:gap-[1rem] md:mt-[6rem] lg:items-start lg:gap-[3rem]    "
-      id="overview">
+      className=" w-[100%] max-w-[70rem] mx-auto flex  flex-col mt-[4rem] gap-[2rem] justify-start items-start  sm:mt-[5rem] sm:gap-[1rem] md:mt-[6rem] lg:items-start lg:gap-[3rem]    "
+      id="overview"
+    >
       {products.map((product, index) => {
         const { title, image, button, icon, description, isPositionReverse } =
           product;

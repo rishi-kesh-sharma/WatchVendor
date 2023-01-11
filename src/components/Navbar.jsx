@@ -38,13 +38,13 @@ const Navbar = () => {
     <div className="relative min-h-[100px] " style={{ zIndex: 1000 }}>
       {!show && (
         <FiMenu
-          className="fixed z-[5000] top-6 right-[3rem] text-3xl font-extralight md:hidden"
+          className="fixed cursor-pointer z-[5000] top-6 right-[3rem] text-3xl font-extralight md:hidden"
           onClick={(e) => setShow(true)}
         />
       )}
       {show && (
         <RxCross1
-          className="fixed top-[2rem] text-3xl  left-2 z-50 md:hidden"
+          className="fixed cursor-pointer top-[2rem] text-3xl  left-2 z-50 md:hidden"
           onClick={(e) => setShow(false)}
         />
       )}
