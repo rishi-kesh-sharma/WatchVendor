@@ -55,44 +55,38 @@ const Navbar = () => {
           <ul className="flex flex-col w-[100vw] items-center justify-center h-[100vh]  py-[3rem] md:hidden lg:hidden  max-h-[60rem] gap-[0.7rem]">
             <li
               onClick={handleNavLinksClick}
-              className="m-2 text-lg font-semibold  "
-            >
+              className="m-2 text-lg font-semibold  ">
               <a href="#home">Home</a>
             </li>
             <hr className="bg-purple-400  w-[100%] " />
 
             <li
               onClick={handleNavLinksClick}
-              className="m-2 text-lg font-semibold  "
-            >
+              className="m-2 text-lg font-semibold  ">
               <a href="#overview">Overview</a>
             </li>
             <hr className="bg-purple-400 w-[100%]" />
             <li
               onClick={handleNavLinksClick}
-              className="m-2 text-lg font-semibold  "
-            >
+              className="m-2 text-lg font-semibold  ">
               <a href="#features">Features</a>
             </li>
             <hr className="bg-purple-400 w-[100%]" />
             <li
               onClick={handleNavLinksClick}
-              className="m-2 text-lg font-semibold  "
-            >
+              className="m-2 text-lg font-semibold  ">
               <a href="#testimonials">Testimonials</a>
             </li>
             <hr className="bg-purple-400 w-[100%] " />
             <li
               onClick={handleNavLinksClick}
-              className="m-2 text-lg font-semibold  "
-            >
+              className="m-2 text-lg font-semibold  ">
               <a href="/blog">Blog</a>
             </li>
             <hr className="bg-purple-400 w-[100%]" />
             <li
               onClick={handleNavLinksClick}
-              className="m-2 text-lg font-semibold  "
-            >
+              className="m-2 text-lg font-semibold  ">
               <a href="/buy">
                 <Button mdWidth={"110px"} mdHeight={"40px"}>
                   Buy Now
@@ -107,8 +101,7 @@ const Navbar = () => {
           style={{ zIndex: 1000 }}
           className={`  fixed   left-0 right-0  top-0   w-[100vw] items-center justify-center h-[5rem] md:h-[4rem] topbar ${
             whiteBackground ? "bg-white " : "bg-transparent"
-          }`}
-        >
+          }`}>
           <li className="mx-[1rem] py-[0.4rem] text-lg font-semibold  md:text-sm  ">
             <a href="#home">Home</a>
           </li>
