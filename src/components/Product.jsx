@@ -1,18 +1,11 @@
 import React from "react";
 
-const Product = ({
-  title,
-  image,
-  button,
-  icon,
-  description,
-  isPositionReverse,
-}) => {
+const Product = ({ title, image, button, icon, description }) => {
   return (
     <div className="flex flex-col w-[80%] mx-auto max-h-[2000px]  justify-start items-start  md:gap-[3rem]   md:flex-row md:justify-between md:items-center  md:first-of-type:flex-row-reverse lg:justify-start">
-      <div className="bg-[url(hexagon.png)] w-[100%] mx-auto  p-[2rem] grid place-items-center  md:w-[25rem] bg-center  bg-contain  bg-no-repeat md:p-7 lg:flex-1 lg:max-w-[30rem] ">
+      <div className="bg-[url(hexagon.png)] w-[100%] mx-auto  p-[2rem] grid place-items-center  md:w-[60rem] bg-center  bg-contain  bg-no-repeat md:p-7 lg:flex-1 lg:p-[4rem]  lg:w-[468px] ">
         <img
-          className="md:object-contain w-[100%] mx-auto xl:w-[100%] "
+          className="md:object-contain w-[100%] mx-auto  xl:w-[100%] "
           src={image}
           alt={title}
         />

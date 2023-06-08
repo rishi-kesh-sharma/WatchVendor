@@ -174,41 +174,42 @@ html {
 .footerContent {
   margin-top: 10em;
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr 2fr 0.7fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 6fr 1fr 1fr;
-
+  justify-items: start;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2.8fr 1fr 2fr 0.7fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 6fr;
+  width: 80%;
   grid-template-areas:
-    ". . . . ."
-    ". logo email . ."
-    ". . . . ."
-    ". service about addr ."
-    ". . . . ."
-    ". service1 aboutus street ."
-    ". service2 contactus loc ."
-    ". service3 home postal ."
-    ". service4 blog . ."
-    ". . donate . ."
-    ". . . . ."
-    ". . bd app ."
-    ". . . . .";
+    ". . ."
+    "logo email ."
+    ". . ."
+    "service about addr"
+    ". . ."
+    "service1 aboutus street"
+    "service2 contactus loc"
+    "service3 home postal"
+    "service4 blog ."
+    ". donate ."
+    /* ". . ." */
+    "bd . app";
 }
 .copy {
   grid-area: bd;
   font-weight: 400;
+  /* margin-top: 8rem; */
   font-size: 0.875rem;
   align-self: center;
   line-height: 155.5%;
   color: rgba(255, 255, 255, 0.7);
 }
 .by {
+  /* margin-top: 8rem; */
   grid-area: app;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 155.5%;
   color: rgba(255, 255, 255, 0.7);
   align-self: center;
-  justify-self: end;
+  /* justify-self: end; */
 }
 .footerLinks {
   align-self: center;
@@ -224,7 +225,7 @@ html {
 }
 .fotterFirstTwo {
   grid-area: email;
-  justify-self: center;
+  /* justify-self: center; */
   align-self: center;
   display: flex;
   align-items: center;
@@ -235,14 +236,14 @@ html {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 155.5%;
-  justify-self: center;
+  justify-self: start;
   align-self: center;
   color: #fff;
 }
 
 .aboutUsHeading {
   grid-area: about;
-  justify-self: center;
+  /* justify-self: center; */
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 155.5%;
@@ -252,7 +253,7 @@ html {
 
 .ourAddressHeading {
   grid-area: addr;
-  justify-self: center;
+  /* justify-self: center; */
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 155.5%;
@@ -262,23 +263,23 @@ html {
 
 .eachService1 {
   grid-area: service1;
-  justify-self: center;
+  /* justify-self: center; */
   color: #fff;
   font-size: 0.875rem;
   align-self: center;
-  line-height: 155.5%;
+  /* line-height: 155.5%; */
 }
 .eachService2 {
   grid-area: service2;
-  justify-self: center;
+  /* justify-self: center; */
   color: #fff;
   font-size: 0.875rem;
   align-self: center;
-  line-height: 155.5%;
+  /* line-height: 155.5%; */
 }
 .eachService3 {
   grid-area: service3;
-  justify-self: center;
+  /* justify-self: center; */
   color: #fff;
   font-size: 0.875rem;
   align-self: center;
@@ -286,7 +287,7 @@ html {
 }
 .eachService4 {
   grid-area: service4;
-  justify-self: center;
+  /* justify-self: center; */
   color: #fff;
   font-size: 0.875rem;
   line-height: 155.5%;
@@ -300,7 +301,7 @@ html {
   color: #fff;
   font-size: 0.875rem;
   line-height: 155.5%;
-  justify-self: center;
+  /* justify-self: center; */
   align-self: center;
 }
 
@@ -327,22 +328,22 @@ html {
   font-size: 0.875rem;
   line-height: 155.5%;
   align-self: center;
-  justify-self: center;
+  /* justify-self: center; */
 }
 .streetName {
   align-self: center;
-  justify-self: center;
+  /* justify-self: center; */
   grid-area: street;
 }
 .cityName {
   align-self: center;
-  justify-self: center;
+  /* justify-self: center; */
   grid-area: loc;
 }
 .postal {
   align-self: center;
   grid-area: postal;
-  justify-self: center;
+  /* justify-self: center; */
 }
 .footerContent2 {
   display: none;
@@ -350,159 +351,104 @@ html {
 .logoText {
   margin-left: 10px;
 }
-@media screen and (max-width: 2240px) {
-  .footerContent {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr 0.5fr 0.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 5fr 1fr 1fr;
-    grid-template-areas:
-      ". . . . ."
-      ". logo email . ."
-      ". . . . ."
-      ". service about addr ."
-      ". . . . ."
-      ". service1 aboutus street ."
-      ". service2 contactus loc ."
-      ". service3 home postal ."
-      ". service4 blog . ."
-      ". . donate . ."
-      ". . . . ."
-      ". . bd app ."
-      ". . . . .";
-  }
+.fotterFirstTwo * {
+  color: white;
+  /* font-size: 0.7rem; */
 }
-@media screen and (max-width: 2106px) {
-  .footerContent {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr 0.7fr 0.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 3fr 1fr 1fr;
-    grid-template-areas:
-      ". . . . ."
-      ". logo email . ."
-      ". . . . ."
-      ". service about addr ."
-      ". . . . ."
-      ". service1 aboutus street ."
-      ". service2 contactus loc ."
-      ". service3 home postal ."
-      ". service4 blog . ."
-      ". . donate . ."
-      ". . . . ."
-      ". . bd app ."
-      ". . . . .";
+
+@media screen and (max-width: 830px) {
+  .by,
+  .copy {
+    margin-top: 0;
   }
-}
-@media screen and (max-width: 1900px) {
+
   .footerContent {
-    grid-template-columns: 1fr 1fr 1fr 4fr;
-    grid-template-rows: 2fr 1fr 2fr 0.7fr 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 3fr 1fr 1fr;
+    margin-top: 10em;
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 2fr 1fr 2fr 0.7fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 4fr;
+    width: 80%;
     grid-template-areas:
-      " . . . ."
-      " logo email . ."
-      " . . . ."
-      " service about addr ."
-      " . . . ."
-      " service1 aboutus street ."
-      " service2 contactus loc ."
-      " service3 home postal ."
-      " service4 blog . ."
-      " . donate . ."
-      " . . . ."
-      " . bd app ."
-      " . . . .";
-  }
-}
-@media screen and (max-width: 1500px) {
-  .footerContent {
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 2fr 1fr 2fr 0.7fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 2fr 4fr 1fr;
-    grid-template-areas:
-      ". . . . ."
-      ". logo email . ."
-      ". . . . ."
-      ". service about addr addr"
-      ". . . . ."
-      ". service1 aboutus street street"
-      ". service2 contactus loc loc"
-      ". service3 home postal postal"
-      ". service4 blog . ."
-      ". . donate . ."
-      ". . . . ."
-      ". bd bd app ."
-      ". . . . .";
+      ". . ."
+      "logo email ."
+      ". . ."
+      "service about addr"
+      ". . ."
+      "service1 aboutus street"
+      "service2 contactus loc"
+      "service3 home postal"
+      "service4 blog ."
+      ". donate ."
+      /* ". . ." */
+      "bd . app";
   }
 }
 
-@media screen and (max-width: 912px) {
-  .footerContent {
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 2fr 1fr 2fr 0.7fr 0.3fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 2fr 3fr 1fr;
-    grid-template-areas:
-      ". . . . ."
-      ". logo email . ."
-      ". . . . ."
-      ". service about addr addr"
-      ". . . . ."
-      ". service1 aboutus street street"
-      ". service2 contactus loc loc"
-      ". service3 home postal postal"
-      ". service4 blog . ."
-      ". . donate . ."
-      ". . . . ."
-      ". bd bd app ."
-      ". . . . .";
+@media screen and (max-width: 738px) {
+  .fotterFirstTwo * {
+    color: white;
+    font-size: 0.7rem;
   }
-}
-@media screen and (max-width: 648px) {
+  .by,
+  .copy {
+    margin-top: 0;
+  }
+
   .footerContent {
-    grid-template-columns: 2fr 1fr 1fr 1fr 5fr;
-    grid-template-rows: 2fr 1fr 2fr 0.7fr 0.3fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 2fr 3fr 1fr;
+    margin-top: 10em;
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 5fr 0.4fr 0.4fr 1fr 1fr 0.03fr 0.03fr 0.03fr 0.03fr 0.03fr 0.03fr 8fr;
+    width: 80%;
     grid-template-areas:
-      ". . . . ."
-      ". logo email . ."
-      ". . . . ."
-      ". service about addr addr"
-      ". . . . ."
-      ". service1 aboutus street street"
-      ". service2 contactus loc loc"
-      ". service3 home postal postal"
-      ". service4 blog . ."
-      ". . donate . ."
-      ". . . . ."
-      ". bd bd app ."
-      ". . . . .";
+      ". . ."
+      "logo . ."
+      "email . ."
+      ". . ."
+      "service about addr"
+      ". . ."
+      "service1 aboutus street"
+      "service2 contactus loc"
+      "service3 home postal"
+      "service4 blog ."
+      ". donate ."
+      "bd . app";
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
+  .copy,
+  .by {
+    font-size: 0.7rem;
+  }
   .footerContent {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(26, 0.4fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr 0.4fr 1fr 1fr 0.3fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.5fr 1fr 0.2fr 0.2fr 0.2fr 0.2fr 1fr 0.5fr 0.5fr 1fr;
     grid-template-areas:
-      " . . . . . ."
-      ". . . . . ."
-      ". . . . . ."
-      ". . . . . ."
-      ". . logo logo . ."
-      ". . email email . ."
-      ". . . . . ."
-      ". service service about about . "
-      ". . . . . ."
-      ". service1 service1 aboutus aboutus ."
-      ". service2 service2 contactus contactus ."
-      ". service3 service3 home home ."
-      ". service4 service4 blog blog ."
-      ". . . donate donate ."
-      ". . . . . ."
-      ". addr addr addr addr ."
-      ". . . . . ."
-      ". street street street street ."
-      ". loc loc loc loc ."
-      ". postal postal postal postal ."
-      ". . . . . ."
-      ". . . . . ."
-      ". bd bd bd bd . "
-      ". app app app . ."
-      /* ". . . . . ." */
-      ". . . . . .";
+      ". . "
+      " logo ."
+      "email ."
+      ". ."
+      "service about"
+      ". ."
+      "service1 aboutus"
+      "service2 contactus"
+      "service3 home"
+      "service4 blog"
+      ". donate"
+      ". ."
+      "addr ."
+      ". ."
+      "street street"
+      "loc loc"
+      "postal postal"
+      ". ."
+      "bd bd"
+      "app app"
+      ". .";
   }
 }
 

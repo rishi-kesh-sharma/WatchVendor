@@ -6,22 +6,18 @@ import { BiDonateBlood } from "react-icons/bi";
 import React from "react";
 function Footer() {
   return (
-    <div className="footerContainer  bg-[url(footer-background.png)] bg-cover w-[100%] mt-[-8rem] sm:mt-[-5rem] md:mt-[-3rem] lg:mt-[-1rem] xl:mt-0">
-      <div className="footerContent ">
+    <div className="footerContainer  bg-[url(footer-background.png)] bg-cover w-[100%] mt-[-5rem] sm:mt-[-5rem] md:mt-[-1rem] lg:mt-[-1rem] xl:mt-0">
+      <div className="footerContent w-[80%] ">
         <div className="footerFirstOne">
           <BiDonateBlood className=" text-white text-2xl" />
-          <span
-            // className="logoText"
-            style={{ fontSize: "1.25rem", color: "#fff" }}>
+          <span style={{ fontSize: "1.25rem", color: "#fff" }}>
             <span style={{ fontSize: "1.5rem", color: "#fff" }}>B</span>Donor
           </span>
         </div>
 
         <div className="fotterFirstTwo">
-          <AiOutlineMail className="text-white text-2xl" />
-          <span style={{ color: "#fff", marginLeft: "0.9rem" }}>
-            bdonor@apptech.com
-          </span>
+          <AiOutlineMail className="text-white " />
+          <span>bdonor@apptech.com</span>
         </div>
         <span className="footerServiceHeading">Services</span>
         <span className="aboutUsHeading">About Us</span>
